@@ -1,13 +1,30 @@
 # TimeCheck
 
-VB6 server time checker (`TimeCheck.exe`): uses NetHostTime to fetch each listed server’s clock, compares to local time, and can export deltas to `c:\temp\Server Times.txt`. Open `TimeCheck.vbp` in the VB6 IDE (needs NetHostTime.dll).
+VB6 Server Time Check (`TimeCheck.exe`): uses the NetHostTime component to read each listed server's clock, compares it with local time, and lists the deltas; the File menu can start a check, export results to `c:\temp\Server Times.txt`, and load or save the server list. Open `TimeCheck.vbp` in the VB6 IDE.
 
-**Source last updated:** 2026-08-27 · **Language:** VB6 · **Target:** VB6 Win32 · **Output:** WinForms exe
-
-_Note: original OneDrive LastWriteTime values were wiped to 2026-08-27 by a zip transfer; date above uses best available evidence (headers/copyright where helpful)._
+**Source last updated:** 2001-02-28 · **Language:** VB6 · **Target:** VB6 Win32 · **Output:** WinForms exe
 
 ## Solution structure
 
 | Project | Language | Type | Purpose |
 |---------|----------|------|---------|
 | `TimeCheck` (`TimeCheck.vbp`) | VB6 | WinForms exe | Compare local vs remote server times |
+
+## How to open
+
+Open the `.vbp` in Visual Basic 6.0 IDE:
+- `TimeCheck.vbp`
+
+## Requirements
+
+- Visual Basic 6.0 IDE
+- NetHostTime 5.0 component (sibling `NetHostTime` project)
+- Common Dialog control (comdlg32.ocx)
+
+## Attribution and provenance
+
+Working copy from my Historical Dev folder `VB/Old/TimeCheck`. Project company field: CSC.
+
+## License
+
+MIT © 2026 VaderConsulting for Dave Robinson's code. See `LICENSE`.
